@@ -1,0 +1,26 @@
+{
+  "clusters": {
+    "cluster_a": {
+      "name": "Primary (DC1)",
+      "url": "https://artifactory-a.example.com/artifactory",
+      "token": "REPLACE_WITH_ACCESS_TOKEN_A"
+    },
+    "cluster_b": {
+      "name": "DR (DC2)",
+      "url": "https://artifactory-b.example.com/artifactory",
+      "token": "REPLACE_WITH_ACCESS_TOKEN_B"
+    }
+  },
+  "verify_ssl": true,
+  "timeout": 30,
+  "email": {
+    "smtp_host": "smtp.example.com",
+    "smtp_port": 587,
+    "use_tls": true,
+    "username": "smtp-user",
+    "password": "REPLACE_WITH_SMTP_PASSWORD",
+    "from_addr": "artifactory-sync@example.com",
+    "to_addrs": ["team@example.com"],
+    "subject": "Artifactory Cluster Sync Report"
+  }
+}
